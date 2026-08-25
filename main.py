@@ -110,8 +110,10 @@ async def handle_callbacks(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ==================== تشغيل التطبيق ====================
 if __name__ == "__main__":
     app = ApplicationBuilder().token(config.BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CallbackQueryHandler(handle_callbacks))
     
-    print("تم تشغيل البوت بنجاح...")
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CallbackQueryHandler(button_handler))
+    
+    print("...تم تشغيل البوت بنجاح")
     app.run_polling()
+
