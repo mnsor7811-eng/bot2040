@@ -1,4 +1,0 @@
-pyTelegramBotAPI
-requests
-pycountry
-google-generativeai
