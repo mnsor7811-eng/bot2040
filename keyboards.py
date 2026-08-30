@@ -136,13 +136,15 @@ def smm_main_keyboard():
     markup.add(InlineKeyboardButton("🔙 الصفحة الرئيسية", callback_data="back_main"))
     return markup
 
+
 def smm_servers_keyboard():
     markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("🚀 سيرفر الرشق 1 (السريع)", callback_data="select_smm_srv_1"))
-    markup.add(InlineKeyboardButton("🚀 سيرفر الرشق 2 (الممتاز)", callback_data="select_smm_srv_2"))
-    markup.add(InlineKeyboardButton("🚀 سيرفر الرشق 3 (اقتصادي)", callback_data="select_smm_srv_3"))
+    markup.add(InlineKeyboardButton("🚀 سيرفر سمم تون (SMMStone)", callback_data="select_smm_srv_1"))
+    markup.add(InlineKeyboardButton("🚀 سيرفر سمم اكسترا (SMMExtra)", callback_data="select_smm_srv_2"))
+    markup.add(InlineKeyboardButton("🚀 سيرفر سمم فلورس (SMMFollows)", callback_data="select_smm_srv_3"))
     markup.add(InlineKeyboardButton("🔙 رجوع", callback_data="smm_main"))
     return markup
+
 
 def boost_keyboard(smm_server_id="2"):
     markup = InlineKeyboardMarkup(row_width=1)
