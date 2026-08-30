@@ -142,10 +142,15 @@ SMM_SERVERS = {
         'key': '5b7f4d7540012630cbd8f95013acaed4'
     },
     'srv2': {
-        'url': 'https://smmxstar.com/api/v2',
+        'url': 'https://smmextra.com/api/v2',
         'key': '13cb06a01b5a7259c14c1727c2f5591d'
+    },
+    'srv3': {
+        'url': 'https://smmfollows.com/api/v2',
+        'key': '47171c2450a3d3c2e3c2ef81d745b2ee'
     }
 }
+
 
 SMM_SERVICES_CACHE = {}
 SMM_CACHE_TIME = {}
