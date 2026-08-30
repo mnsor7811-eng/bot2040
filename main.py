@@ -1,4 +1,4 @@
-Import time
+import time
 import requests
 import sqlite3
 import hmac
