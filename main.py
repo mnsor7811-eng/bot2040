@@ -139,15 +139,11 @@ init_db()
 SMM_SERVERS = {
     'srv1': {
         'url': 'https://smmstone.com/api/v2',
-        'key': '01e140e9a06bbce1c5633971a354cf77'
+        'key': '5b7f4d7540012630cbd8f95013acaed4'
     },
     'srv2': {
-        'url': 'https://smmstone.com/api/v2',
-        'key': '01e140e9a06bbce1c5633971a354cf77'
-    },
-    'srv3': {
-        'url': 'https://smmstone.com/api/v2',
-        'key': '01e140e9a06bbce1c5633971a354cf77'
+        'url': 'https://smmxstar.com/api/v2',
+        'key': '13cb06a01b5a7259c14c1727c2f5591d'
     }
 }
 
