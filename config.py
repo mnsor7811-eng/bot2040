@@ -24,29 +24,31 @@ PAYMENT_DETAILS = {
     'binance': {'name': '🟡 بايننس باي (Binance Pay)', 'acc': '979808293', 'min': '0.5 $', 'rate': '1$ = 1$'}
 }
 
+
 # ==================== مزودو خدمات الرشق (SMM Panel API) ====================
 SMM_PROVIDERS = {
     '1': {
-        'name': '🌟 السيرفر الأول (SMMXStar)',
-        'url': 'https://smmxstar.com/api/v2',
-        'key': 'ضع_مفتاح_SMMXSTAR_هنا',
-        'active': False
+        'name': '🚀 سيرفر سمم تون (SMMStone)',
+        'url': 'https://smmstone.com/api/v2',
+        'key': '5b7f4d7540012630cbd8f95013acaed4',
+        'active': True
     },
     '2': {
-        'name': '🚀 السيرفر الثاني (SMMFollows)',
-        'url': 'https://smmfollows.com/api/v2',
-        'key': os.getenv('SMMFOLLOWS_API_KEY', 'Dd396e6fb10365de859bb57dff7f94ba'),
+        'name': '🚀 سيرفر سمم اكسترا (SMMExtra)',
+        'url': 'https://smmextra.com/api/v2',
+        'key': '13cb06a01b5a7259c14c1727c2f5591d',
         'active': True
     },
     '3': {
-        'name': '🚀 سيرفر الرشق 3 (اقتصادي)',
+        'name': '🚀 سيرفر سمم فلورس (SMMFollows)',
         'url': 'https://smmfollows.com/api/v2',
-        'key': os.getenv('SMMFOLLOWS_API_KEY', 'Dd396e6fb10365de859bb57dff7f94ba'),
+        'key': '47171c2450a3d3c2e3c2ef81d745b2ee',
         'active': True
     }
 }
 
-DEFAULT_SMM_PROVIDER = '2'
+DEFAULT_SMM_PROVIDER = '1'
+
 
 # ==================== سيرفرات الأرقام المؤقتة ====================
 SERVERS = {
