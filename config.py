@@ -5,7 +5,7 @@ import time
 import google.generativeai as genai
 
 # ==================== الإعدادات الأساسية ====================
-TOKEN = os.getenv('TOKEN', '8927305428:AAFio91c9845hfuhIR0Ft2Ng1t-OSkuVjUo')
+TOKEN = os.getenv('TOKEN', '8927305428:AAFlmUQsOQr5e5MpHqfx3IAPLGmtk5wuzv4')
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AQ.Ab8RN6IOLYCW3mnMh6H5le6Bc1pAG60TXO0IoxjpPcHvaFZHkg')
 ADMIN_ID = int(os.getenv('ADMIN_ID', 6113734300))
 ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', '@Num_s7')
