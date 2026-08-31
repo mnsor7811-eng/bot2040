@@ -34,7 +34,7 @@ SMM_PROVIDERS = {
         'active': True
     },
     '2': {
-        'name': '🚀 سيرفر سمم اكسترا (SMMExtra)',
+        'name': '🚀 سيرفر سمم اكسترا (SMMExtar)',
         'url': 'https://smmextar.com/api/v2',
         'key': '13cb06a01b5a7259c14c1727c2f5591d',
         'active': True
