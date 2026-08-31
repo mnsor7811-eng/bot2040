@@ -172,18 +172,18 @@ def get_cached_smm_services(server_id='2'):
         return data
     return []
 
-# ==================== دالة الفلترة الدقيقة لكل منصة ====================
 def filter_smm_services(target_type, server_id='2'):
     services = get_cached_smm_services(server_id)
     filtered = []
     
+    # توسيع الكلمات المفتاحية لتشمل احتمالات أكبر أسماء الخدمات
     keywords = {
-        'telegram': ['telegram', 'تيليجرام', 'تليجرام', 'تلي'],
-        'instagram': ['instagram', 'انستا', 'انستجرام', 'انستقرام'],
-        'youtube': ['youtube', 'يوتيوب'],
-        'twitter': ['twitter', 'تويتر', 'x '],
-        'facebook': ['facebook', 'فيسبوك', 'فيس'],
-        'tiktok': ['tiktok', 'تيك توك', 'تيك'],
+        'telegram': ['telegram', 'تيليجرام', 'تليجرام', 'تلي', 'مشتري', 'عضو', 'اعضاء', 'مشاهدات', 'تفاعل', 'tele'],
+        'instagram': ['instagram', 'انستا', 'انستجرام', 'انستقرام', 'متابع', 'لايكات', 'اكسبلور', 'insta'],
+        'youtube': ['youtube', 'يوتيوب', 'مشاهدات', 'ساعات', 'مشتري', 'لايك', 'yt'],
+        'twitter': ['twitter', 'تويتر', 'x ', 'إكس', 'متابعين تويتر'],
+        'facebook': ['facebook', 'فيسبوك', 'فيس', 'متبعين فيس'],
+        'tiktok': ['tiktok', 'تيك توك', 'تيك', 'اكسبلور تيك'],
         'threads': ['threads', 'ثريدز'],
         'whatsapp': ['whatsapp', 'واتساب', 'واتس'],
         'others': []
@@ -201,6 +201,7 @@ def filter_smm_services(target_type, server_id='2'):
                 filtered.append(srv)
             
     return filtered
+
 
 # ==================== أوامر البدء ====================
 @bot.message_handler(commands=['start', 'num'])
