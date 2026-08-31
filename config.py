@@ -28,19 +28,19 @@ PAYMENT_DETAILS = {
 # ==================== مزودو خدمات الرشق (SMM Panel API) ====================
 SMM_PROVIDERS = {
     '1': {
-        'name': '🚀 سيرفر سمم تون (SMMStone)',
+        'name': '🚀 السيرفر 1 (SMMStone)',
         'url': 'https://smmstone.com/api/v2',
         'key': '5b7f4d7540012630cbd8f95013acaed4',
         'active': True
     },
     '2': {
-        'name': '🚀 سيرفر سمم اكسترا (SMMExtar)',
-        'url': 'https://smmextar.com/api/v2',
+        'name': '🚀 السيرفر 2 (SMMXstar)',
+        'url': 'https://smmxstar.com/api/v2',
         'key': '13cb06a01b5a7259c14c1727c2f5591d',
         'active': True
     },
     '3': {
-        'name': '🚀 سيرفر سمم فلورس (SMMFollows)',
+        'name': '🚀 السيرفر 3 (SMMFollows)',
         'url': 'https://smmfollows.com/api/v2',
         'key': '47171c2450a3d3c2e3c2ef81d745b2ee',
         'active': True
