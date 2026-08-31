@@ -176,31 +176,44 @@ def filter_smm_services(target_type, server_id='2'):
     services = get_cached_smm_services(server_id)
     filtered = []
     
-    # توسيع الكلمات المفتاحية لتشمل احتمالات أكبر أسماء الخدمات
-    keywords = {
-        'telegram': ['telegram', 'تيليجرام', 'تليجرام', 'تلي', 'مشتري', 'عضو', 'اعضاء', 'مشاهدات', 'تفاعل', 'tele'],
-        'instagram': ['instagram', 'انستا', 'انستجرام', 'انستقرام', 'متابع', 'لايكات', 'اكسبلور', 'insta'],
-        'youtube': ['youtube', 'يوتيوب', 'مشاهدات', 'ساعات', 'مشتري', 'لايك', 'yt'],
-        'twitter': ['twitter', 'تويتر', 'x ', 'إكس', 'متابعين تويتر'],
-        'facebook': ['facebook', 'فيسبوك', 'فيس', 'متبعين فيس'],
-        'tiktok': ['tiktok', 'تيك توك', 'تيك', 'اكسبلور تيك'],
-        'threads': ['threads', 'ثريدز'],
-        'whatsapp': ['whatsapp', 'واتساب', 'واتس'],
+
+def filter_smm_services(target_type, server_id='2'):
+    services = get_cached_smm_services(server_id)
+    filtered = []
+    
+    # ربط أزرار البوت بالكلمات العربية الفعلية التي تظهر في تصنيفات السيرفر العربي
+    arabic_keywords = {
+        'telegram': ['تيليجرام', 'تليجرام', 'تلي', 'telegram'],
+        'instagram': ['انستقرام', 'انستجرام', 'انستا', 'instagram'],
+        'youtube': ['يوتيوب', 'youtube'],
+        'twitter': ['تويتر', 'إكس', 'twitter', 'x'],
+        'facebook': ['فيسبوك', 'فيس بوك', 'facebook'],
+        'tiktok': ['تيك توك', 'تيك', 'tiktok'],
+        'threads': ['ثريدز', 'threads'],
+        'whatsapp': ['واتساب', 'واتس', 'whatsapp'],
         'others': []
     }
     
-    target_keys = keywords.get(target_type, [target_type.lower()])
+    keys = arabic_keywords.get(target_type, [])
     
     for srv in services:
-        name_cat = (str(srv.get('name', '')) + " " + str(srv.get('category', ''))).lower()
+        # جمع اسم الخدمة والتصنيف لتحويلهما إلى نص ن بحث فيه
+        name = str(srv.get('name', '')).lower()
+        category = str(srv.get('category', '')).lower()
+        combined_text = f"{name} {category}"
+        
         if target_type == 'others':
-            if not any(k in name_cat for kw_list in keywords.values() for k in kw_list if kw_list):
+            # الخدمات الأخرى التي لا تنتمي للأقسام الرئيسية أعلاه
+            all_main_keys = [k for sublist in arabic_keywords.values() for k in sublist]
+            if not any(k in combined_text for k in all_main_keys):
                 filtered.append(srv)
         else:
-            if any(k in name_cat for k in target_keys):
+            # مطابقة أي كلمة مفتاحية عربية أو إنجليزية تخص القسم
+            if any(k in combined_text for k in keys):
                 filtered.append(srv)
-            
+                
     return filtered
+
 
 
 # ==================== أوامر البدء ====================
