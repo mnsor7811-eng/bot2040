@@ -177,9 +177,6 @@ def filter_smm_services(target_type, server_id='2'):
     filtered = []
     
 
-def filter_smm_services(target_type, server_id='2'):
-    services = get_cached_smm_services(server_id)
-    filtered = []
     
     # ربط أزرار البوت بالكلمات العربية الفعلية التي تظهر في تصنيفات السيرفر العربي
     arabic_keywords = {
