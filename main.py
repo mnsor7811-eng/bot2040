@@ -1396,9 +1396,18 @@ def handle_user_steps(message):
         markup = smm_confirm_keyboard(service_id, qty, total_cost, category_code=category_code, smm_server_id=server_id)
         bot.send_message(message.chat.id, confirm_text, reply_markup=markup)
         return
-
-# ==================== تشغيل البوت ====================
+        
+# ==================== بدء تشغيل البوت ====================
 if __name__ == '__main__':
-    set_bot_commands()
-    print("🤖 Bot is running...")
-    bot.infinity_polling(skip_pending=True)
+    print("🤖 تم بدء تشغيل البوت بنجاح وحفظ البيانات بشكل دائم في SQLite...")
+    try:
+        bot.delete_webhook(drop_pending_updates=True)
+    except Exception as e:
+        print(f"Webhook reset warning: {e}")
+
+    while True:
+        try:
+            bot.infinity_polling(timeout=20, long_polling_timeout=20, skip_pending=True)
+        except Exception as e:
+            print(f"Polling error: {e}")
+            time.sleep(5)
