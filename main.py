@@ -2708,7 +2708,7 @@ def callback_handler(call):
 
     elif call.data.startswith("smm_srv_"):
         server_id = call.data.replace("smm_srv_", "")
-        server_name = "سيرفر الرشق 2 (SMM Tigers)" if server_id == "tiger" else "سيرفر الرشق 1 (SMM Xtar)"
+        server_name = "سيرفر الرشق 2" if server_id == "tiger" else "سيرفر الرشق 1"
         text_boost = f"توفر خدمات متابعين وإعجابات ومشاهدات بأسعار مناسبة\n🏢 **{server_name}**\n\n🧛♂️ الرجاء إختيار التطبيق / الخدمة:"
         try: bot.edit_message_text(text_boost, chat_id, message_id, parse_mode="Markdown", reply_markup=boost_keyboard(server_id))
         except: bot.send_message(chat_id, text_boost, parse_mode="Markdown", reply_markup=boost_keyboard(server_id))
