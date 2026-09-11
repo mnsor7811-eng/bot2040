@@ -872,12 +872,12 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     bal_part = f"💸 : {bal_str}$ •"
 
     # حساب المسافات بديناميكية كاملة لضمان بقاء الآيدي والرصيد في أقصى اليسار تماماً دون أي انكسار مهما كبر الرصيد
-    target_width = 50
+    target_width = 48
     sp_id = " " * max(2, target_width - len(id_vis))
     sp_bal = " " * max(2, target_width - len(bal_part))
 
     # أسماء القنوات في جهة اليمين تبدأ بالإيموجي
-    ch1_name = "📎 قناة البوت"
+    ch1_name = "📎 قناة البوت الرسمية"
     ch2_name = "🛒 قناة التفعيلات"
     ch3_name = "📚 قناة التعليمات"
     ch4_name = "🎬 قناة الشروحات"
