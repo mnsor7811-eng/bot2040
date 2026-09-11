@@ -304,16 +304,16 @@ def admin_agents_keyboard():
 def user_support_keyboard():
     markup = InlineKeyboardMarkup()
     sup1 = get_setting('support_admin_1', '@Num_s7').strip()
-    sup2 = get_setting('support_admin_2', '@Support_SMS7').strip()
+    sup2 = get_setting('support_admin_2', '@NUM_G').strip()
     
     if sup1:
         clean1 = sup1.replace("@", "").replace("https://t.me/", "").strip()
         if clean1:
-            markup.row(InlineKeyboardButton(f"💬 تواصل مع الدعم الأول ({sup1})", url=f"https://t.me/{clean1}"))
+            markup.row(InlineKeyboardButton(f"💬 تواصل مع الإدارة ({sup1})", url=f"https://t.me/{clean1}"))
     if sup2 and sup2 != sup1:
         clean2 = sup2.replace("@", "").replace("https://t.me/", "").strip()
         if clean2:
-            markup.row(InlineKeyboardButton(f"💬 تواصل مع الدعم الثاني ({sup2})", url=f"https://t.me/{clean2}"))
+            markup.row(InlineKeyboardButton(f"💬 تواصل مع الدعم ({sup2})", url=f"https://t.me/{clean2}"))
             
     markup.row(InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="back_main"))
     return markup
@@ -321,7 +321,7 @@ def user_support_keyboard():
 def admin_support_keyboard():
     markup = InlineKeyboardMarkup()
     sup1 = get_setting('support_admin_1', '@Num_s7')
-    sup2 = get_setting('support_admin_2', '@Support_SMS7')
+    sup2 = get_setting('support_admin_2', '@NUM_G')
     markup.row(InlineKeyboardButton(f"👤 الدعم 1: {sup1} ✏️", callback_data="adm_edit_sup_1"))
     markup.row(InlineKeyboardButton(f"👤 الدعم 2: {sup2} ✏️", callback_data="adm_edit_sup_2"))
     markup.row(InlineKeyboardButton("🔙 رجوع لوحة الإدارة", callback_data="admin_panel"))
