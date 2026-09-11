@@ -867,12 +867,12 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     rlm = "\u200F"
     ltr = "\u200E"
 
-    id_part = f"👤 : <code>{user_id}</code> •"
-    id_vis = f"👤 : {user_id} •"
-    bal_part = f"💲 : {bal_str}$ •"
+    id_part = f"🆔️ : <code>{user_id}</code> •"
+    id_vis = f"🆔️ : {user_id} •"
+    bal_part = f"💸 : {bal_str}$ •"
 
     # حساب المسافات بديناميكية كاملة لضمان بقاء الآيدي والرصيد في أقصى اليسار تماماً دون أي انكسار مهما كبر الرصيد
-    target_width = 49
+    target_width = 50
     sp_id = " " * max(2, target_width - len(id_vis))
     sp_bal = " " * max(2, target_width - len(bal_part))
 
