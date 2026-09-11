@@ -890,8 +890,8 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     id_vis = f"👤 : {user_id} •"
     bal_part = f"💲 : {bal_str}$ •"
 
-    # حساب المسافات بدقة (38 حرفاً) لتمتد للجهة اليسرى تماماً دون أن تنكسر الأسطر
-    target_width = 48
+    # حساب المسافات بدقة (49 حرفاً) لتمتد للجهة اليسرى تماماً دون أن تنكسر الأسطر
+    target_width = 49
     sp1 = " " * max(2, target_width - len(usr_vis))
     sp2 = " " * max(2, target_width - len(ch1_name) - len(id_vis))
     sp3 = " " * max(2, target_width - len(ch2_name) - len(bal_part))
