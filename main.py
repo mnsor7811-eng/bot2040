@@ -895,7 +895,7 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     line1 = f"{rlm}<a href=\"{ch_off}\">📎قناة البوت الرسمية</a>{sp1}{ltr}💙 {user_disp} 💙{ltr}"
     line2 = f"{rlm}<a href=\"{ch_ord}\">🛒قناة التفعيلات</a>{sp2}{ltr}👤 : <code>{user_id}</code> •{ltr}"
     line3 = f"{rlm}<a href=\"{ch_tut}\">📚قناة شرح الاستخدام</a>{sp3}{ltr}💲 : {bal_str}$ •{ltr}"
-    line4 = f"{rlm}<a href=\"{ch_exp}\">🎬قناة الشروحات والإرشادات</a>"
+    line4 = f"{rlm}<a href=\"{ch_exp}\">🎬قناة الشروحات </a>"
 
     return (
         "• أهلاً بك في بوت 🎁 SMS SMM STORE\n\n"
