@@ -1003,14 +1003,14 @@ def support_cmd(message):
         bot.send_message(message.chat.id, "عذراً، يرجى الاشتراك في قنوات البوت أولاً للوصول للدعم.", reply_markup=subscription_markup())
         return
     sup1 = get_setting('support_admin_1', '@Num_s7').strip()
-    sup2 = get_setting('support_admin_2', '@Support_SMS7').strip()
+    sup2 = get_setting('support_admin_2', '@NUM_G').strip()
     msg = (
         "🎧 <b>قسم الدعم الفني والمساعدة:</b>\n\n"
         "إذا واجهتك أي مشكلة أو كان لديك استفسار، يسعدنا تواصلك معنا مباشرة عبر المعرفات الرسمية التالية:\n\n"
-        f"1️⃣ <b>الدعم الفني الأول:</b> <code>{sup1}</code>\n"
+        f"1️⃣ <b>الإدارة:</b> <code>{sup1}</code>\n"
     )
     if sup2 and sup2 != sup1:
-        msg += f"2️⃣ <b>الدعم الفني الثاني:</b> <code>{sup2}</code>\n"
+        msg += f"2️⃣ <b>الدعم الفني:</b> <code>{sup2}</code>\n"
     msg += "\n💡 اضغط على الأزرار أدناه للتحدث مباشرة مع الدعم الفني:"
     try:
         bot.send_message(message.chat.id, msg, parse_mode="HTML", reply_markup=user_support_keyboard())
