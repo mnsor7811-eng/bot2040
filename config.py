@@ -801,7 +801,7 @@ def setup_db():
         'captcha_enabled': '1',
         'referral_purchase_percent': '5.0',
         'support_admin_1': '@Num_s7',
-        'support_admin_2': '@Support_SMS7',
+        'support_admin_2': '@NUM_G',
         'section_numbers_active': '1',
         'section_ready_active': '1',
         'section_smm_active': '1',
