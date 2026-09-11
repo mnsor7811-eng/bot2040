@@ -867,8 +867,8 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     rlm = "\u200F"
     ltr = "\u200E"
 
-    id_part = f"🆔 : <code>{user_id}</code> •"
-    id_vis = f"🆔 : {user_id} •"
+    id_part = f"🆔 : <code>{user_id}</code> "
+    id_vis = f"🆔 : {user_id} "
     bal_part = f"💸 : {bal_str}$ •"
 
     # حساب المسافات بديناميكية كاملة لضمان محاذاة الآيدي والرصيد في أقصى اليسار تماماً
