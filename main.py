@@ -901,7 +901,7 @@ def get_main_welcome_text(user_id, name="", username="", balance=0.0):
     sp1 = " " * sp1_count
 
     # السطر الثالث: الرصيد (إضافة 3 مسافات لدفعه لليسار تماماً بمحاذاة الآيدي)
-    sp3_count = max(2, target_width - len(ch2_name) - len(bal_part) + 3)
+    sp3_count = max(2, target_width - len(ch2_name) - len(bal_part) + 8)
     sp3 = " " * sp3_count
 
     # الترتيب حسب الطلب بدقة:
